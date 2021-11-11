@@ -19,6 +19,8 @@ public class hit : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D hit)
     {
+        anim.SetTrigger("Blood hit");
+
         Debug.Log(hit.name);
         Move monster = hit.GetComponent<Move>();
         Head isHeadshot = hit.GetComponent<Head>();
@@ -26,7 +28,6 @@ public class hit : MonoBehaviour
         if (isHeadshot != null) 
         {
             isHeadshot.Headshot();
-            anim.SetTrigger("Blood hit");
         }
         else if (monster != null) 
         {

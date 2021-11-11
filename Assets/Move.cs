@@ -68,6 +68,7 @@ public class Move : MonoBehaviour
     public void beHurt(int damage)
     {
         hits -= damage;
+
         if (hits <= 0)
         {
             GetComponentInChildren<Head>().circle.enabled = false;
@@ -75,6 +76,7 @@ public class Move : MonoBehaviour
             anim.SetTrigger("Die");
             Invoke("DestroySelf", 2.0f);
         }
+
     }
 
 

@@ -10,6 +10,7 @@ public class Fire : MonoBehaviour
     public Transform firePoint;
     public GameObject bullet;
     private Animator anim;
+    private bool reloading = false;
 
     // Start is called before the first frame update
     private void Awake()
@@ -22,10 +23,11 @@ public class Fire : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.R)) 
         {
+            reloading = true;
             Invoke("Reload", 2.0f); 
         }
 
-        if (Input.GetButtonDown("Fire1") && ammo > 0) 
+        if (Input.GetButtonDown("Fire1") && ammo > 0 && !reloading) 
         {
             Shoot();
             ammo--;
@@ -41,5 +43,6 @@ public class Fire : MonoBehaviour
     void Reload()
     {
         ammo = maxAmmo;
+        reloading = false;
     }
 }

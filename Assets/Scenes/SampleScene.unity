@@ -587,7 +587,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 5.269762
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -741,8 +741,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 651435413}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.4732, y: -2.3263, z: 0}
-  m_LocalScale: {x: 1.3916149, y: 1.7809887, z: 1}
+  m_LocalPosition: {x: 6.5332, y: -2.4481, z: 0}
+  m_LocalScale: {x: 1.4923677, y: 1.8625579, z: 1}
   m_Children:
   - {fileID: 2123484058}
   m_Father: {fileID: 0}
@@ -936,7 +936,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1140838521}
   m_LocalRotation: {x: -0.013708597, y: 0.012730239, z: 0.7045082, w: 0.7094493}
-  m_LocalPosition: {x: 4.49, y: -5.34, z: 0.22}
+  m_LocalPosition: {x: 4.22, y: -5.54, z: 0.23}
   m_LocalScale: {x: 0.6621384, y: 9.82233, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1045,7 +1045,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1227613133}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.71, y: -0.06, z: 0}
+  m_LocalPosition: {x: 9.4, y: -0.41, z: 0}
   m_LocalScale: {x: 0.6621384, y: 9.82233, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1446,7 +1446,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1466286668}
   m_LocalRotation: {x: -0.013708597, y: 0.012730239, z: 0.7045082, w: 0.7094493}
-  m_LocalPosition: {x: 7.15, y: 1.38, z: -0.02}
+  m_LocalPosition: {x: 8.59, y: 0.73, z: 0}
   m_LocalScale: {x: 0.65551704, y: 4.3759456, z: 0.99}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1546,7 +1546,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1496931455}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: -0.74, z: 0}
+  m_LocalPosition: {x: 1.29, y: 0.01, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2123484058}
@@ -1608,7 +1608,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
