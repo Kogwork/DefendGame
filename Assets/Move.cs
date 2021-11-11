@@ -21,6 +21,7 @@ public class Move : MonoBehaviour
     {
         anim = GetComponent<Animator>();
         hits = (int)Random.Range(3f, 7f);
+        moveSpeed = (int)Random.Range(2f, 6f);
     }
 
     // Update is called once per frame
