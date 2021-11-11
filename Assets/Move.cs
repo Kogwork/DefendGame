@@ -14,14 +14,17 @@ public class Move : MonoBehaviour
     [SerializeField] private Transform enemy;
 
     public int hits;
+    private Health barricadeToHit;
     private float cooldownTime = Mathf.Infinity;
     private Animator anim;
 
     private void Awake()
     {
+        barricadeToHit = GetComponentInParent<Health>();
         anim = GetComponent<Animator>();
         hits = (int)Random.Range(3f, 7f);
         moveSpeed = (int)Random.Range(2f, 6f);
+        anim.SetBool("Run",true);
     }
 
     // Update is called once per frame
@@ -37,11 +40,13 @@ public class Move : MonoBehaviour
         }
         else 
         {
+            anim.SetBool("Run", false);
+
             if (cooldownTime >= attackCooldown && hits > 0)
             {
                 cooldownTime = 0;
                 anim.SetTrigger("Attack");
-                //barricadehp.BreakBarricade(damage);
+                barricadeToHit.BreakBarricade(damage);
             }
         }
     }

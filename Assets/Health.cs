@@ -10,6 +10,7 @@ public class Health : MonoBehaviour
     [SerializeField] public Sprite stage3;
     [SerializeField] public Sprite stage2;
     [SerializeField] public Sprite stage1;
+    [SerializeField] private BoxCollider2D boxColider;
 
     public SpriteRenderer spriteRenderer;
     private int maxHealth = 100;
@@ -19,8 +20,7 @@ public class Health : MonoBehaviour
     {
         if (hitpoint <= 0)
         {
-            Destroy(gameObject);
-            UnityEditor.EditorApplication.isPlaying = false;
+            boxColider.enabled = false;
         }
 
         precnetHealth = maxHealth * hitpoint / 100;

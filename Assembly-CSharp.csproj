@@ -63,6 +63,7 @@
     <Compile Include="Assets\hit.cs" />
     <Compile Include="Assets\Player.cs" />
     <Compile Include="Assets\Head.cs" />
+    <Compile Include="Assets\UI.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
