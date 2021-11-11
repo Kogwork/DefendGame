@@ -38,7 +38,7 @@ public class Move : MonoBehaviour
             {
                 cooldownTime = 0;
                 anim.SetTrigger("Attack");
-                barricadehp.BreakBarricade(damage);
+                //barricadehp.BreakBarricade(damage);
             }
         }
     }
