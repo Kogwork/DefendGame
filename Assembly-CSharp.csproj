@@ -59,11 +59,11 @@
     <Compile Include="Assets\Move.cs" />
     <Compile Include="Assets\Health.cs" />
     <Compile Include="Assets\Fire.cs" />
+    <Compile Include="Assets\ZombieUi.cs" />
     <Compile Include="Assets\Spawner.cs" />
     <Compile Include="Assets\hit.cs" />
     <Compile Include="Assets\Player.cs" />
     <Compile Include="Assets\Head.cs" />
-    <Compile Include="Assets\UI.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

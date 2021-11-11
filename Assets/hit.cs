@@ -14,7 +14,7 @@ public class hit : MonoBehaviour
     {
         body.velocity = transform.right * speed;
         anim = GetComponent<Animator>();
-
+        Invoke("DestroyBullet", 4f);
     }
 
     void OnTriggerEnter2D(Collider2D hit)
@@ -33,6 +33,11 @@ public class hit : MonoBehaviour
             monster.beHurt(1);
         }
 
+        DestroyBullet();
+    }
+
+    void DestroyBullet() 
+    {
         Destroy(gameObject);
     }
 }
