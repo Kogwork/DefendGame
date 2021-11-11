@@ -96,8 +96,7 @@ Animation:
   m_Enabled: 1
   serializedVersion: 3
   m_Animation: {fileID: 7400000, guid: c96c1cf3c69b8ef41bebacb90dccf8f7, type: 2}
-  m_Animations:
-  - {fileID: 7400000, guid: 63758269fd47916479860897d91ffbf6, type: 2}
+  m_Animations: []
   m_WrapMode: 0
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
@@ -168,4 +167,3 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   enemy: {fileID: 3185852101435730974}
-  barricadehp: {fileID: 0}

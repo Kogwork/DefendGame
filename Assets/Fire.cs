@@ -9,10 +9,12 @@ public class Fire : MonoBehaviour
     private int maxAmmo = 30;
     public Transform firePoint;
     public GameObject bullet;
+    private Animator anim;
+
     // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
-        
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -23,7 +25,7 @@ public class Fire : MonoBehaviour
             Invoke("Reload", 2.0f); 
         }
 
-        if (Input.GetButtonDown("Fire1")) 
+        if (Input.GetButtonDown("Fire1") && ammo > 0) 
         {
             Shoot();
             ammo--;
@@ -32,6 +34,7 @@ public class Fire : MonoBehaviour
 
     void Shoot() 
     {
+        anim.SetTrigger("Fire");
         Instantiate(bullet, firePoint.position, firePoint.rotation);
     }
 
