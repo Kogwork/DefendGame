@@ -16,12 +16,11 @@ public class Move : MonoBehaviour
     public int hits;
     private float cooldownTime = Mathf.Infinity;
     private Animator anim;
-    private GameObject head;
 
     private void Awake()
     {
         anim = GetComponent<Animator>();
-        hits = (int)Random.Range(1f, 4f);
+        hits = (int)Random.Range(3f, 7f);
     }
 
     // Update is called once per frame
@@ -65,6 +64,8 @@ public class Move : MonoBehaviour
         hits -= damage;
         if (hits <= 0)
         {
+            GetComponentInChildren<Head>().circle.enabled = false;
+            boxColider.enabled = false;
             anim.SetTrigger("Die");
             Invoke("DestroySelf", 2.0f);
         }

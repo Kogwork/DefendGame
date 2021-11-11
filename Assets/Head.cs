@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Head : MonoBehaviour
 {
-
+    [SerializeField] public CircleCollider2D circle;
     private Move owner;
     private int ownerHealth;
     // Start is called before the first frame update
