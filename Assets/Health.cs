@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class Health : MonoBehaviour
 {
 
-    [SerializeField] private int hitpoint = 100;
+    [SerializeField] public int hitpoint = 100;
     [SerializeField] public Sprite stage4;
     [SerializeField] public Sprite stage3;
     [SerializeField] public Sprite stage2;
@@ -14,6 +14,7 @@ public class Health : MonoBehaviour
     [SerializeField] private BoxCollider2D boxColider;
 
     public SpriteRenderer spriteRenderer;
+    public bool endgame = false;
     private int maxHealth = 100;
     private int precnetHealth = 100;
     // Update is called once per frame
@@ -21,7 +22,7 @@ public class Health : MonoBehaviour
     {
         if (hitpoint <= 0)
         {
-            boxColider.enabled = false;
+            endGame();
         }
 
         precnetHealth = maxHealth * hitpoint / 100;
@@ -46,8 +47,10 @@ public class Health : MonoBehaviour
         }
     }
 
-    private void GameOver() 
+    private void endGame() 
     {
+        boxColider.enabled = false;
+        endgame = true;
     }
 
     public void BreakBarricade(int damage)

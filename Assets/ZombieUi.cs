@@ -5,9 +5,12 @@ using UnityEngine;
 public class ZombieUi : MonoBehaviour
 {
     [SerializeField] private Fire weapon;
+    [SerializeField] private Health barricade;
     [SerializeField] public UnityEngine.UI.Text ammoText;
     [SerializeField] public UnityEngine.UI.Text reloadText;
 
+
+    public Gameover gameover;
     private int ammoToDisplay;
     // Start is called before the first frame update
 
@@ -26,6 +29,11 @@ public class ZombieUi : MonoBehaviour
         {
             ammoText.color = Color.yellow;
             reloadText.text = string.Empty;
+        }
+
+        if(barricade.endgame)
+        {
+            gameover.Setup();
         }
     }
 
