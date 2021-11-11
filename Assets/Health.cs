@@ -28,15 +28,17 @@ public class Health : MonoBehaviour
         switch (precnetHealth) 
         {
             case int n when n >= 80:
-                spriteRenderer.sprite = stage4;
                 break;
             case int n when n >= 60:
-                spriteRenderer.sprite = stage3;
+                spriteRenderer.sprite = stage4;
                 break;
             case int n when n >= 40:
-                spriteRenderer.sprite = stage2;
+                spriteRenderer.sprite = stage3;
                 break;
             case int n when n >= 20:
+                spriteRenderer.sprite = stage2;
+                break;
+            case int n when n >= 0:
                 spriteRenderer.sprite = stage1;
                 break;
 
