@@ -5,7 +5,7 @@ using UnityEngine;
 public class hit : MonoBehaviour
 {
 
-    public float speed = 20f;
+    public float speed = 22f;
     public Rigidbody2D body;
     private Animator anim;
 
@@ -19,9 +19,6 @@ public class hit : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D hit)
     {
-        anim.SetTrigger("Blood hit");
-
-        Debug.Log(hit.name);
         Move monster = hit.GetComponent<Move>();
         Head isHeadshot = hit.GetComponent<Head>();
 

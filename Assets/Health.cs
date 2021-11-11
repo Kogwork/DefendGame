@@ -22,6 +22,7 @@ public class Health : MonoBehaviour
     {
         if (hitpoint <= 0)
         {
+            spriteRenderer.color = new Color(1f, 1f, 1f, 0.6f);
             endGame();
         }
 

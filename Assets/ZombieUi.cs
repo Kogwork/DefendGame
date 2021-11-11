@@ -21,12 +21,7 @@ public class ZombieUi : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        ammoToDisplay = weapon.GetComponent<Fire>().ammo;
-        ammoText.text = ammoToDisplay.ToString();
-        headshot.text = headshotCount.ToString();
-        kills.text = killsCount.ToString();
-
-        if (ammoToDisplay < 5) 
+        if (ammoToDisplay < 5)
         {
             ammoLow();
 
@@ -36,6 +31,19 @@ public class ZombieUi : MonoBehaviour
             ammoText.color = Color.yellow;
             reloadText.text = string.Empty;
         }
+
+        if (weapon.reloading)
+        {
+            ammoText.text = "Reloading...";
+        }
+        else
+        {
+            ammoToDisplay = weapon.GetComponent<Fire>().ammo;
+            ammoText.text = ammoToDisplay.ToString();
+        }
+
+        headshot.text = headshotCount.ToString();
+        kills.text = killsCount.ToString();
 
         if(barricade.endgame)
         {

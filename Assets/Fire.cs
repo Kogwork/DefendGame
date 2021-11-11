@@ -10,7 +10,7 @@ public class Fire : MonoBehaviour
     public Transform firePoint;
     public GameObject bullet;
     private Animator anim;
-    private bool reloading = false;
+    public bool reloading = false;
 
     // Start is called before the first frame update
     private void Awake()

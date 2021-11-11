@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 3387995406351044058}
   - component: {fileID: 2539307974243527255}
   - component: {fileID: 6941332062050955638}
-  - component: {fileID: 1902496342175565027}
   m_Layer: 0
   m_Name: Bullet
   m_TagString: Untagged
@@ -101,7 +100,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 0.1
+  m_GravityScale: 0.12
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -137,22 +136,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 15
   body: {fileID: 3387995406351044058}
---- !u!95 &1902496342175565027
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8161873896854032732}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 6f655e0b3d355f54eaa09e0a71b3db05, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0

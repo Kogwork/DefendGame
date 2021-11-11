@@ -18,7 +18,7 @@ public class Move : MonoBehaviour
     public int hits;
     private Health barricadeToHit;
     private float cooldownTime = Mathf.Infinity;
-    private Animator anim;
+    public Animator anim;
 
     private void Awake()
     {
