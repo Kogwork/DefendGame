@@ -17,6 +17,7 @@ public class Head : MonoBehaviour
     public void Headshot()
     {
         Move monster = owner;
+        owner.zombieui.HeadshotKill();
 
         if (monster != null)
         {

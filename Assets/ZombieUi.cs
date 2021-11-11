@@ -8,10 +8,14 @@ public class ZombieUi : MonoBehaviour
     [SerializeField] private Health barricade;
     [SerializeField] public UnityEngine.UI.Text ammoText;
     [SerializeField] public UnityEngine.UI.Text reloadText;
+    [SerializeField] public UnityEngine.UI.Text headshot;
+    [SerializeField] public UnityEngine.UI.Text kills;
 
 
     public Gameover gameover;
+    private int headshotCount;
     private int ammoToDisplay;
+    private int killsCount;
     // Start is called before the first frame update
 
     // Update is called once per frame
@@ -19,8 +23,10 @@ public class ZombieUi : MonoBehaviour
     {
         ammoToDisplay = weapon.GetComponent<Fire>().ammo;
         ammoText.text = ammoToDisplay.ToString();
+        headshot.text = headshotCount.ToString();
+        kills.text = killsCount.ToString();
 
-        if(ammoToDisplay < 5) 
+        if (ammoToDisplay < 5) 
         {
             ammoLow();
 
@@ -35,6 +41,15 @@ public class ZombieUi : MonoBehaviour
         {
             gameover.Setup();
         }
+    }
+    public void HeadshotKill() 
+    {
+        headshotCount++;
+    }
+
+    public void RegularKill()
+    {
+        killsCount++;
     }
 
     private void ammoLow()

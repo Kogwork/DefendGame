@@ -6,7 +6,8 @@ using UnityEngine.UI;
 
 public class Gameover : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [SerializeField] private GameObject zombies;
+
     public void Setup() 
     {
         Invoke("endScreen", 1.2f); 
@@ -17,8 +18,9 @@ public class Gameover : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
-    private void endScreen() 
+    private void endScreen()
     {
         gameObject.SetActive(true);
+        zombies.SetActive(false);
     }
 }

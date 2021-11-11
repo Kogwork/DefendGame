@@ -12,6 +12,7 @@ public class Move : MonoBehaviour
     [SerializeField] private BoxCollider2D boxColider;
     [SerializeField] private LayerMask barricade;
     [SerializeField] private Transform enemy;
+    [SerializeField] public ZombieUi zombieui;
     SpriteRenderer sprite;
 
     public int hits;
@@ -21,6 +22,7 @@ public class Move : MonoBehaviour
 
     private void Awake()
     {
+        zombieui = FindObjectOfType<ZombieUi>();
         float scaleVar = 4f + (GetModifier());
         sprite = GetComponent<SpriteRenderer>();
         sprite.color = new Color(GetModifier(), GetModifier(), GetModifier(), 1);
@@ -79,6 +81,7 @@ public class Move : MonoBehaviour
             GetComponentInChildren<Head>().circle.enabled = false;
             boxColider.enabled = false;
             anim.SetTrigger("Die");
+            zombieui.RegularKill();
             Invoke("DestroySelf", 2.0f);
         }
 
