@@ -12,4 +12,22 @@ public class hit : MonoBehaviour
     {
         body.velocity = transform.right * speed;
     }
+
+    void OnTriggerEnter2D(Collider2D hit)
+    {
+        Debug.Log(hit.name);
+        Move monster = hit.GetComponent<Move>();
+        Head isHeadshot = hit.GetComponent<Head>();
+
+        if (isHeadshot != null) 
+        {
+            isHeadshot.Headshot();
+        }
+        else if (monster != null) 
+        {
+            monster.beHurt(1);
+        }
+
+        Destroy(gameObject);
+    }
 }

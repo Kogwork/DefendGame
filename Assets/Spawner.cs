@@ -27,7 +27,7 @@ public class Spawner : MonoBehaviour
             {
                 for (int i = 0; i < numberToSpawn; i++)
                 {
-                    Instantiate(objectToSpawn, new Vector3(this.transform.position.x + GetModifier(), this.transform.position.y + GetModifier())
+                    Instantiate(objectToSpawn, new Vector3(transform.position.x + GetModifier(),transform.position.y + GetModifier())
                         , Quaternion.identity, parent.transform);
                 }
                 spawnTimer = rate;
