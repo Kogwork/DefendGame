@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Health : MonoBehaviour
 {
@@ -43,6 +44,10 @@ public class Health : MonoBehaviour
                 break;
 
         }
+    }
+
+    private void GameOver() 
+    {
     }
 
     public void BreakBarricade(int damage)

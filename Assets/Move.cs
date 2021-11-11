@@ -12,6 +12,7 @@ public class Move : MonoBehaviour
     [SerializeField] private BoxCollider2D boxColider;
     [SerializeField] private LayerMask barricade;
     [SerializeField] private Transform enemy;
+    SpriteRenderer sprite;
 
     public int hits;
     private Health barricadeToHit;
@@ -20,6 +21,10 @@ public class Move : MonoBehaviour
 
     private void Awake()
     {
+        float scaleVar = 4f + (GetModifier());
+        sprite = GetComponent<SpriteRenderer>();
+        sprite.color = new Color(GetModifier(), GetModifier(), GetModifier(), 1);
+        this.transform.localScale = new Vector3(scaleVar, scaleVar, 4f + GetModifier());
         barricadeToHit = GetComponentInParent<Health>();
         anim = GetComponent<Animator>();
         hits = (int)Random.Range(3f, 7f);
@@ -84,5 +89,14 @@ public class Move : MonoBehaviour
     {
         anim.gameObject.GetComponent<Animator>().enabled = false;
         Destroy(gameObject);
+    }
+
+    float GetModifier()
+    {
+        float modifier = Random.Range(0f, 1f);
+        if (Random.Range(0, 1) > 0)
+            return -modifier;
+        else
+            return modifier;
     }
 }

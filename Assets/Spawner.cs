@@ -25,7 +25,7 @@ public class Spawner : MonoBehaviour
             spawnTimer -= Time.deltaTime;
             if (spawnTimer <= 0f)
             {
-                for (int i = 0; i < numberToSpawn; i++)
+                for (int i = 0; i < numberToSpawn + GetModifier(); i++)
                 {
                     Instantiate(objectToSpawn, new Vector3(transform.position.x,transform.position.y + GetModifier())
                         , Quaternion.identity, parent.transform);
@@ -37,7 +37,7 @@ public class Spawner : MonoBehaviour
 
     float GetModifier()
     {
-        float modifier = Random.Range(0f, 2.3f);
+        float modifier = Random.Range(0f, 2f);
         if (Random.Range(0, 5) > 0)
             return -modifier;
         else
